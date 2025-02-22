@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arqam Hussain</title>
+
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./images/dg.jpg" type="image/jpg" sizes="any">
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <style>
+      /* Navbar Styles */
+      .navbar {
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        color: #3f396d !important; /* Ensure brand color is consistent */
+      }
+
+      .navbar-toggler {
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+        color: #3f396d; /* Match the brand color */
+      }
+
+      .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      .navbar-nav {
+        gap: 1rem; /* Space between nav items */
+      }
+
+      .nav-link {
+        color: #3f396d !important; /* Match the brand color */
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #6a11cb !important; /* Change color on hover */
+      }
+
+      /* Contact Button */
+      .c-btn {
+        background-color: #6a11cb;
+        color: white !important;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      .c-btn:hover {
+        background-color: #4d0a9b; /* Darker shade on hover */
+      }
+
+      /* Media Queries for Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .navbar-nav {
+          gap: 0.5rem; /* Reduce gap for smaller screens */
+          padding-top: 1rem; /* Add padding for better spacing */
+        }
+
+        .navbar-collapse {
+          background-color: white; /* Ensure background is white */
+          padding: 1rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
+        }
+
+        .c-btn {
+          margin-top: 1rem; /* Add margin for better spacing */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      id="navbar-top"
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
+    >
+      <div class="container-fluid px-3 px-md-5">
+        <!-- Brand Logo -->
+        <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d">
+          Arqam Hussain
+        </a>
+
+        <!-- Hamburger Menu Button (Visible on Mobile) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-menu-button-fill"></i> <!-- Bootstrap Icon for Menu -->
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-3 gap-md-4" style="font-size: 1.1rem">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Button (Hidden on Mobile) -->
+        <a
+          href="#contact"
+          class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block"
+          style="text-decoration: none; color: inherit;"
+        >
+          Contact
+        </a>
+      </div>
+    </nav>
+
+    <!-- navbar ends here -->
+
+    <!-- home section starts  -->
+    <section class="home pt-5 pb-5" id="home">
+      <div class="container">
+        <div class="row justify-content-evenly align-items-center">
+          <!-- Text Content -->
+          <div class="col-12 col-md-6 text-center text-md-start" data-aos="slide-right">
+            <h2 style="color: #3f396d">
+              Hello! I Am <br /><span class="c-orange">Arqam Hussain</span>
+            </h2>
+            <p class="text-muted" style="color: #000000;">
+              <bold>I'm a web developer passionate about crafting responsive, user-friendly websites that blend seamless functionality with modern, eye-catching design</bold>
+            </p>
+            <div class="d-flex justify-content-center justify-content-md-start gap-3">
+              <a href="https://wa.me/03131203615" target="_blank">
+                <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+                  Hire Me
+                </button>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Image Content -->
+          <div class="col-12 col-md-4 mt-4 mt-md-0">
+            <img src="./images/j.png" class="img-fluid" alt="Arqam Hussain" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- expertise section starts -->
+    <section class="expertise mt-5" id="service">
+      <div class="heading text-center">
+        <small class="text-uppercase fw-bold text-primary">Our Services</small>
+        <h3 class="mt-3 fw-bold">Building Websites That Stand Out</h3>
+        <p class="fw-bold text-dark mt-3">Fast, modern and visually stunning websites designed to elevate your brand.</p>
+      </div>
+    </section>
+    
+    
+      </div>
+      <div class="row justify-content-evenly mt-5 g-4">
+        <!-- Web Design Card -->
+        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card text-center p-4 shadow-lg rounded-3 hover-scale bg-light">
+            <div class="image-section mb-4">
+              <img
+                src="./images/service-icon1.png"
+                class="img-fluid rounded-3"
+                alt="Web Design Example"
+              />
+            </div>
+            <div class="content">
+              <h4 class="fw-bold mb-3">Creative Web Design</h4>
+              <p class="text-muted mb-4">
+                Designing visually stunning, user-friendly websites that captivate your audience and drive engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Front-End Development Card -->
+        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card text-center p-4 shadow-lg rounded-3 hover-scale bg-light">
+            <div class="image-section mb-4">
+              <img
+                src="./images/service-icon2.png"
+                class="img-fluid rounded-3"
+                alt="Front-End Development Example"
+              />
+            </div>
+            <div class="content">
+              <h4 class="fw-bold mb-3">Front-End Development</h4>
+              <p class="text-muted mb-4">
+                Building responsive, fast, and scalable websites using the latest front-end technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- UI/UX Design Card -->
+        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card text-center p-4 shadow-lg rounded-3 hover-scale bg-light">
+            <div class="image-section mb-4">
+              <img
+                src="./images/service-icon4.png"
+                class="img-fluid rounded-3"
+                alt="UI/UX Design Example"
+              />
+            </div>
+            <div class="content">
+              <h4 class="fw-bold mb-3">UI/UX Design</h4>
+              <p class="text-muted mb-4">
+                Crafting intuitive and seamless user experiences that enhance usability and satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+    
+        <!-- Performance Optimization Card -->
+        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card text-center p-4 shadow-lg rounded-3 hover-scale bg-light">
+            <div class="image-section mb-4">
+              <img
+                src="./images/service-icon3.png"
+                class="img-fluid rounded-3"
+                alt="Performance Optimization Example"
+              />
+            </div>
+            <div class="content">
+              <h4 class="fw-bold mb-3">Performance Optimization</h4>
+              <p class="text-muted mb-4">
+                Enhancing website speed and performance for a smoother user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- expertise section ends here -->
+    
+    <!-- Add this CSS for hover effect and animations -->
+    <style>
+      .hover-scale {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+      .text-gradient {
+        background: linear-gradient(90deg, #6a11cb, #2575fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .service-card {
+        background: white;
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        border-color: #2575fc;
+      }
+      .image-section img {
+        transition: transform 0.3s ease;
+      }
+      .image-section img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+
+    <!-- skill section starts -->
+<!-- skill section starts -->
+<!-- skill section starts -->
+<section class="skill mt-5 py-5" id="about">
+  <div class="row justify-content-evenly">
+    <!-- Skill Details Section (Moved to Top) -->
+    <div class="col-10 col-md-12 skill-detail text-center">
+      <div class="heading mt-5 mt-md-3">
+        <h3>Your Go-To Expert for Digital Success</h3>
+        <p class="text-muted small-text">
+            I am dedicated to developing modern, responsive, and user-friendly websites and applications that elevate businesses online. With a strong focus on sleek designs and seamless functionality, I deliver solutions that make an impact and drive growth.
+        </p>
+        <p class="text-muted small-text">
+            My expertise lies in clean, efficient development and collaborative problem-solving. I customize each project to align with your goals, ensuring that your website or web application meets your exact needs and delivers measurable results.
+        </p>
+        <p class="text-muted small-text">
+            Let’s collaborate to build a strong digital presence that sets you apart from the competition.
+        </p>
+        <a href="https://resume-arqam.netlify.app/" target="_blank" rel="noopener noreferrer" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill" style="background-color: #007bff; border: none; color: #fff; text-decoration: none; font-weight: bold; display: inline-block;">
+            Resume
+        </a>
+    </div>    
+    <!-- Skill Progress Section (Moved to Bottom) -->
+    <div class="col-10 col-md-12 skill-with-progress mt-5">
+      <div class="row justify-content-evenly">
+        <!-- HTML & CSS -->
+        <div class="col-10 col-md-6 col-lg-3 mb-4">
+          <div class="progress-card ms-3 ms-md-0 border border-dark">
+            <div class="circular-progress html-css">
+              <span class="progress-value html-progress">80%</span>
+            </div>
+            <br />
+            <span class="text">HTML & CSS</span>
+          </div>
+        </div>
+        <!-- JavaScript -->
+        <div class="col-10 col-md-6 col-lg-3 mb-4">
+          <div class="progress-card ms-3 ms-md-0 border border-dark">
+            <div class="circular-progress javascript">
+              <span class="progress-value javascript-progress">89%</span>
+            </div>
+            <br />
+            <span class="text">JavaScript & jQuery</span>
+          </div>
+        </div>
+        <!-- GitHub & Git -->
+        <div class="col-10 col-md-6 col-lg-3 mb-4">
+          <div class="progress-card ms-3 ms-md-0 border border-dark">
+            <div class="circular-progress github-git">
+              <span class="progress-value github-git-progress">90%</span>
+            </div>
+            <br />
+            <span class="text">GitHub & Nodejs</span>
+          </div>
+        </div>
+        <!-- ReactJS -->
+        <div class="col-10 col-md-6 col-lg-3 mb-4">
+          <div class="progress-card ms-3 ms-md-0 border border-dark">
+            <div class="circular-progress reactjs">
+              <span class="progress-value reactjs-progress">88%</span>
+            </div>
+            <br />
+            <span class="text">ReactJS & Wordpress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- skill section end here -->
+
+  <!-- Portfolio Section Starts Here -->
+<section class="portfolio" id="portfolio">
+  <div class="heading text-center pt-5">
+    <h3>Review My Portfolio</h3>
+  </div>
+
+  <div class="portfolio-body">
+    <div class="row justify-content-evenly px-4">
+      <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+        <div class="card">
+          <img src="./images/Screenshot (115).png" class="card-img-top" alt="2048 Game" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Portfolio Website</h4>
+            <span class="badge bg-secondary badge-pill">HTML & CSS</span>
+            <span class="badge bg-secondary badge-pill">Bootstrap & JavaScript</span>
+            <br /><br />
+            <a href="https://github.com/arqam66/portfolio_website" target="_blank" class="link">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+        <div class="card">
+          <img src="./images/Screenshot (116).png" class="card-img-top" alt="Currency Converter" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Resume</h4>
+            <span class="badge bg-secondary badge-pill">HTML & CSS</span>
+            <span class="badge bg-secondary badge-pill">JavaScript & jQuery</span>
+            <br /><br />
+            <a href="https://github.com/arqam66/resume" target="_blank" class="read-more-btn link">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="post col-md-4 webapp all col-10 mt-3 mt-md-0" data-aos="fade-up">
+        <div class="card">
+          <img src="./images/Screenshot (117).png" class="card-img-top" alt="Dictionary" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Ecomile Monitor Website</h4>
+            <span class="badge bg-secondary badge-pill">HTML & CSS</span>
+            <span class="badge bg-secondary badge-pill">JavaScript & SCSS & React</span>
+            <br /><br />
+            <a href="https://github.com/arqam66/ecomile_monitors" target="_blank" class="read-more-btn link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-evenly mt-4 px-4">
+      <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+        <div class="card">
+          <img src="./images/Screenshot (120).png" class="card-img-top" alt="PicEditor App" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Happy Brithay Suprise</h4>
+            <span class="badge bg-secondary badge-pill">HTML & CSS</span>
+            <span class="badge bg-secondary badge-pill">JavaScript & jquery</span>
+            <br> <br>
+            <a href="https://github.com/arqam66/happy_brithday_suprise" target="_blank" class="read-more-btn link">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+        <div class="card">
+          <img src="/images/Screenshot (125).png" class="card-img-top" alt="TicTacToe Game" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Portfolio Website</h4>
+            <span class="badge bg-secondary badge-pill">HTML & CSS</span>
+            <span class="badge bg-secondary badge-pill">JavaScript  &  Bootstrap</span>
+           <br> <br>
+            <a href="https://github.com/arqam66/portfolio-part-2" target="_blank" class="read-more-btn link">Read More</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS to Add Black Borders -->
+<style>
+  .portfolio .card {
+    border: 2px solid black;
+    border-radius: 10px; /* Optional: Rounds the corners */
+    padding: 10px; /* Optional: Adds some spacing inside */
+  }
+</style>
+
+    <!-- portfolio section ends here -->
+
+
+    <!-- testimonial section starts  -->
+    <section class="testimonial mt-5 pt-5" id="testimonial">
+      <div class="row justify-content-evenly">
+        <div class="col-md-4 col-10" data-aos="slide-right">
+          <img src="./images/d.jpg" class="img-fluid" alt="Happy Clients" />
+        </div>
+        <div class="col-md-6 col-10 mt-5" data-aos="slide-left">
+          <div class="heading">
+            <small>Testimonials</small>
+            <h3>What Our Clients Say</h3>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        "Arqam Hussain created a stunning, responsive website for us. His work is precise, and he communicates brilliantly. Highly recommended!"
+                      </p>
+                      <h4>Ali Ahmed</h4>
+                      <small class="fs-6 text-muted">Owner, Lahore Crafts</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        "Arqam understood our needs perfectly and delivered a website that exceeded our expectations. Great work!"
+                      </p>
+                      <h4>Fatima Khan</h4>
+                      <small class="fs-6 text-muted">Manager, Karachi Bakes</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        "Arqam is a talented developer. He made our website user-friendly and modern. We’re very happy with his work!"
+                      </p>
+                      <h4>Usman Malik</h4>
+                      <small class="fs-6 text-muted">CEO, Islamabad Tech</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        "Arqam’s dedication and skills are unmatched. He delivered a website that truly represents our brand. Thank you!"
+                      </p>
+                      <h4>Ayesha Raza</h4>
+                      <small class="fs-6 text-muted">Founder, Faisalabad Designs</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              <button class="nextprev-btn rounded-pill prev-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <i class="bi bi-arrow-left-circle-fill prev"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="nextprev-btn rounded-pill next-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <i class="bi bi-arrow-right-circle-fill next"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+ 
+    <!-- blog section ends here -->
+<!-- Blog Section Starts -->
+<section class="blog mt-5 pb-5" id="blog">
+  <div class="heading text-center pt-5">
+    <small>Insights & Updates</small>
+    <h3>Web Development Blog</h3>
+  </div>
+  <div class="row justify-content-evenly px-4 mt-4" data-aos="fade-up">
+    <!-- Blog Post 1: Responsive Design -->
+    <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 webdev all">
+      <div class="card">
+        <img src="./images/andy-holmes-webyw4NsFPg-unsplash.jpg" class="card-img-top rounded-4" alt="Responsive Design" />
+        <div class="card-body px-4">
+          <small>By Arqam Hussain</small>
+          <span class="ms-3">Jan 15, 2024</span>
+          <h4 class="card-title">
+            <a href="bolg.html">Responsive Web Design Websites for Every Device</a>
+          </h4>
+          <p class="text-muted">
+            Learn how to create websites that look stunning on all devices. Explore the principles of responsive design, including flexible grids, media queries, and mobile-first strategies.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Post 2: JavaScript Frameworks -->
+    <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 webdev all">
+      <div class="card">
+        <img src="./images/6184436_3094293.jpg" class="card-img-top rounded-4" alt="JavaScript Frameworks" />
+        <div class="card-body px-4">
+          <small>By Arqam Hussain</small>
+          <span class="ms-3">Sep 15, 2024</span>
+          <h4 class="card-title">
+            <a href="bolg2.html">Top JavaScript Frameworks</a>
+          </h4>
+          <p class="text-muted">
+            Discover the most popular JavaScript frameworks like React, Angular, and Vue.js. Understand their strengths, use cases, and how to choose the right one for your project.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Post 3: Future of Web Development -->
+    <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 webdev all">
+      <div class="card">
+        <img src="./images/11641810_4758689.jpg" class="card-img-top rounded-4" alt="Future of Web Development" />
+        <div class="card-body px-4">
+          <small>By Arqam Hussain</small>
+          <span class="ms-3">Dec 5, 2024</span>
+          <h4 class="card-title">
+            <a href="bolg3.html">The Future of Web Development</a>
+          </h4>
+          <p class="text-muted">
+            Explore the latest trends shaping the future of web development, including AI integration, progressive web apps (PWAs), and the rise of WebAssembly. Stay ahead of the curve!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blog Section Ends -->
+    <!-- contact section starts -->
+    <!-- contact section starts -->
+<!-- Contact Section -->
+<section class="contact py-5" id="contact">
+  <div class="heading text-center">
+    <small>Get in Touch</small>
+    <h3>Any Questions? Feel Free to Contact</h3>
+  </div>
+  <div class="row justify-content-evenly mt-5">
+    <!-- Embedded Google Map -->
+    <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.041714740918!2d67.0285143150031!3d24.861837984051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e9b4f0e3b5f%3A0x4f5f5e5e5e5e5e5e!2sSaddar%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1629999999999!5m2!1sen!2s"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        aria-label="Google Maps location of Saddar, Karachi, Pakistan"
+      ></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
+      <form action="https://formspree.io/f/mqaeylnp" method="POST">
+        <div class="contact-form">
+          <!-- Name Field -->
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control input-field"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+
+          <!-- Email Field -->
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control input-field"
+              id="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+
+          <!-- Mobile Number Field -->
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control input-field"
+              id="mobile"
+              name="mobile"
+              placeholder="Mobile No."
+            />
+          </div>
+
+          <!-- Message Field -->
+          <div class="mb-3">
+            <textarea
+              class="form-control input-field"
+              id="message"
+              name="message"
+              placeholder="Message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn mt-3 py-3 px-5 rounded-pill">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- Contact Section Ends Here -->
+
+<!-- Back to Top Button -->
+<button
+  type="button"
+  class="btn btn-floating btn-lg rounded-pill"
+  id="btn-back-to-top"
+  aria-label="Back to top"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- JavaScript for Back to Top Button -->
+<script>
+  // Back to top button functionality
+  const backToTopButton = document.getElementById("btn-back-to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<!-- Custom CSS for Input Fields and Submit Button -->
+<style>
+  /* Add a dark border to all input fields and textarea */
+  .input-field {
+    border: 2px solid #333; /* Dark border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    padding: 10px; /* Optional: Add padding for better spacing */
+  }
+
+  /* Style for the submit button */
+  .submit-btn {
+    background-color: #007bff; /* Default button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: none; /* Disable any transitions */
+  }
+
+  .submit-btn:hover,
+  .submit-btn:focus,
+  .submit-btn:active {
+    background-color: #007bff; /* Keep the same color on hover/focus/active */
+    color: white; /* Keep the same text color */
+    box-shadow: none; /* Remove any box shadow */
+    outline: none; /* Remove outline on focus */
+    transform: none; /* Disable any transformations */
+  }
+</style>
+
+    <!-- footer section starts  -->
+    <footer class="text-center text-muted py-4 bg-dark">
+      <h3 class="text-white pt-4 fw-bold" data-aos="fade-up">Arqam Hussain</h3>
+      <div class="link-group mt-5" data-aos="fade-up">
+        <a href="#home" class="text-white fw-bold mx-2 text-decoration-none">Home</a>
+        <div class="vr text-white"></div>
+        <a href="#about" class="text-white fw-bold mx-2 text-decoration-none">About</a>
+        <div class="vr text-white"></div>
+        <a href="#service" class="text-white fw-bold mx-2 text-decoration-none">Service</a>
+        <div class="vr text-white"></div>
+        <a href="#portfolio" class="text-white fw-bold mx-2 text-decoration-none">Portfolio</a>
+        <div class="vr text-white"></div>
+        <a href="#blog" class="text-white fw-bold mx-2 text-decoration-none">Blog</a>
+        <div class="vr text-white"></div>
+        <a href="#contact" class="text-white fw-bold mx-2 text-decoration-none">Contact</a>
+      </div>
+      <div class="social-links mt-5" data-aos="fade-up">
+        <a href="https://wa.me/923131203615" target="_blank" class="btn rounded-pill whatsapp" style="background-color: #86e660; color: white;">
+          <i class="bi bi-whatsapp"></i>
+        </a>        
+        <!-- New Links as Buttons with Custom Colors -->
+        <a href="https://github.com/arqam66" target="_blank" class="btn rounded-pill github" style="background-color: #333; color: white;">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/arqam-hussain-%D8%A7%D8%B1%D9%82%D9%85-%D8%AD%D8%B3%DB%8C%D9%86-1a541a28a/" target="_blank" class="btn rounded-pill linkedin" style="background-color: #0077b5; color: white;">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://linktr.ee/arqam4" target="_blank" class="btn rounded-pill linktree" style="background-color: #29b6f6; color: white;">
+          <i class="bi bi-link-45deg"></i>
+        </a>
+      </div>
+      <hr class="text-muted my-4" />
+      
+      <p>All Rights Reserved To Arqam Hussain</p>
+      </footer>
+      
+    <!-- footer section ends here -->
+
+      <!-- bootstrap javascript cdn link  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS library javascript link  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // initializing AOS library
+      AOS.init({
+        duration: 1000,
+        offset: 50,
+      });
+    </script>
+    <!-- custom js file linking -->
+    <script src="js/script.js"></script>
+    
+  </body>
+</html>
